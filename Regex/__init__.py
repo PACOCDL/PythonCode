@@ -60,3 +60,20 @@ if str2 is not None:
 else:
     print('匹配失败')
 
+# 重复，特殊字符以及分组
+
+#\w匹配@前面的任意字符（\n除外），+表示一次或者多次，@为匹配一个@字符，
+# 圆括号内容为在@后面匹配一个或多个字符，字符后面跟着一个.这样的结构出现一次或零次，之后在出现这样的一个结构，最后匹配.com
+patt='\w+@(\w+\.)?\w+\.com'
+
+mail=re.match(patt,'youngxhu123@snuc.edu.com')
+if mail is not None:
+    print('mail匹配成功')
+else:
+    print('mail匹配失败')
+patt='\w+@(\w+\.)*\w{1-10}'
+newMail=re.match(patt,'youngxhui123@st.nuc.eud.com')
+if newMail is not None:
+    print('newmail匹配成功')
+else:
+    print('newmail匹配失败')
