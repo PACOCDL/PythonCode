@@ -44,111 +44,123 @@ print(tuple[2:3])
 print()
 # 元字典
 
-dict = {'a':1,'c':2,a:3}
+dict = {'a': 1, 'c': 2, a: 3}
 
-print('dict',dict)
+print('dict', dict)
 
 print(           )
 # 运算符
-num=2
-print(num//1.1)
-print(num**2)
+num = 2
+print(num // 1.1)
+print(num ** 2)
 print(            )
 # 身份运算符 in/not in
-list=[1,2,3,4,5]
-if(a not in list):
+list = [1, 2, 3, 4, 5]
+if (a not in list):
     print(True)
 else:
     print(False)
 print(            )
 # 条件判断
 
-a=2
-b=3
-c=4
-if a>b:
+a = 2
+b = 3
+c = 4
+if a > b:
     print(a)
-elif a<b:
+elif a < b:
     print(b)
 else:
     print("a=b")
 
 print(            )
 # while
-a=1
-while a<3:
-    print("a=",a)
-    a=a+1
+a = 1
+while a < 3:
+    print("a=", a)
+    a = a + 1
 
 print(            )
 
 # for in 循环
-name=['ali','baidu','google']
+name = ['ali', 'baidu', 'google']
 for n in name:
     print(n)
 
 print(            )
 # 输入语句，输入的类型为String
-#a=input('请输入：')
-#print(a)
+# a=input('请输入：')
+# print(a)
 
 # 函数
 print(            )
-def def_pow(a,b):
-    return a*b
-a=def_pow(2,4)
-print('a=',a)
+
+
+def def_pow(a, b):
+    return a * b
+
+
+a = def_pow(2, 4)
+print('a=', a)
 
 print(abs(-10))
 print(            )
+
+
 # 递归函数
 def digui(a):
-    if a<5:
-        a=a+1
+    if a < 5:
+        a = a + 1
         print(a)
         digui(a)
     else:
         print('ok')
-a=3
+
+
+a = 3
 digui(a)
 # TODU
 print('时间')
 
 # 时间
-a=time.time();
-print('time=',a)
+a = time.time();
+print('time=', a)
 print('高级函数')
 
 # 高级函数
 
-a=abs(-10)
-print('-10的绝对数是',a)
-a=abs(10)
-print('a的绝对数是',a)
-def add(x,y,f):
-   return f(x)+f(b)
-a=2
-b=3
-f=abs
-print("add is",add(a,b,f))
+a = abs(-10)
+print('-10的绝对数是', a)
+a = abs(10)
+print('a的绝对数是', a)
+
+
+def add(x, y, f):
+    return f(x) + f(b)
+
+
+a = 2
+b = 3
+f = abs
+print("add is", add(a, b, f))
 print(            )
+
+
 def powe(x):
-    return x*x
-a=map(pow,[1,2,3,4])
+    return x * x
 
 
+a = map(pow, [1, 2, 3, 4])
 
 print(            )
 # 正则表达式
-test='somew2on@egmail.com'
-if re.match(r'\w*\@\w{1,10}\.\?{1}\w*',test):
+test = 'somew2on@egmail.com'
+if re.match(r'\w*\@\w{1,10}\.\?{1}\w*', test):
     print('ok')
 else:
     print('no')
-print(    '模块'        )
+print('模块')
 
 print(            )
-
-
 
 print(            )

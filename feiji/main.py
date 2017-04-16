@@ -1,7 +1,6 @@
 # coding=utf-8
 
 import time
-
 import pygame
 
 
@@ -34,7 +33,7 @@ class PlayerPlane(object):
             self.x += 20
         elif keyValue == 'space':
             print ('space')
-            self.bullet.append(Bullet(self.screen, self.x + 40, self.y - 15))
+            self.bullet.append(Bullet(self.screen, self.planName, self.x + 40, self.y - 15))
 
         self.draw()
 
@@ -46,9 +45,14 @@ class Enemy(object):
         enmeyImageFile = 'G:\PythonCode\\feiji\img\enemy0.png'
         self.image = pygame.image.load(enmeyImageFile).convert()
         self.fowrd = 'right'
+        self.planName = 'enemy'
+        self.screen = screen
+        self.bullet = []
 
     def draw(self):
         screen.blit(self.image, (self.x, self.y))
+        for temp in self.bullet:
+            temp.draw()
 
     def move(self):
 
@@ -60,25 +64,33 @@ class Enemy(object):
             self.x -= 2
             if self.x < 0:
                 self.fowrd = 'right'
+                self.bullet.append(Bullet(self.screen, self.planName, self.x + 20, self.y + 15))
 
 
 class Bullet(object):
-    def __init__(self, screen, x, y):
+    def __init__(self, screen, planeNaem, x, y):
         print ("调用了这个子弹")
-        bgImage = 'G:\PythonCode\\feiji\\bullet.png'
+        if planeNaem == 'enemy':
+            bgImage = ''
+        else:
+            bgImage = 'G:\PythonCode\\feiji\img\\bullet.png'
         self.zidan = pygame.image.load(bgImage).convert()
         self.x = x
         self.y = y
         self.screen = screen
+        self.planeName = planeNaem
 
     def draw(self):
-        self.y -= 4
+        if self.planeName == 'enemy':
+            self.y += 4
+        else:
+            self.y -= 4
         self.screen.blit(self.zidan, (self.x, self.y))
 
 
 if __name__ == '__main__':
     screen = pygame.display.set_mode((480, 800), 0, 32)
-    bgImageFile = 'G:\PythonCode\\feiji\\background.png'
+    bgImageFile = 'G:\PythonCode\\feiji\img\\background.png'
     background = pygame.image.load(bgImageFile).convert()
 
     player = PlayerPlane(screen)
