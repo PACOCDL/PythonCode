@@ -1,9 +1,7 @@
 # coding:utf-8
 import urllib
 
-from urllib import request
-
-
+# from urllib import request
 page = 1
 url = 'http://www.qiushibaike.com/hot/page/' + str(page)
 try:
