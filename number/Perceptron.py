@@ -60,7 +60,7 @@ y = df.loc[0:100, 4].values
 y = np.where(y == 'Iris-setosa', -1, 1)
 
 x = df.iloc[0:100, [0, 2]].values
-print x
+print(x)
 
 plt.scatter(x[:50, 0], x[:50, 1], color='red', marker='o', lable='setosa')
 plt.scatter(x[50:100, 0], x[50:100, 1], color='blue', marker='x', lable='versicolor')
