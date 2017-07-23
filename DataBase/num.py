@@ -7,3 +7,11 @@ print(c)
 print(c[-1])
 print(c[5:])
 print(c[::2])
+
+c=np.random.randint(1,100,10)
+print(c)
+
+print(np.min(c))
+
+print(c.min())
+print(np.sort(c))
