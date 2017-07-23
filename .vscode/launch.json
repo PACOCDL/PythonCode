@@ -115,7 +115,7 @@
             "name": "Flask",
             "type": "python",
             "request": "launch",
-            "stopOnEntry": false,
+            "stopOnEntry": true,
             "pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
             "program": "fully qualified path fo 'flask' executable. Generally located along with python interpreter",
             "cwd": "${workspaceRoot}",

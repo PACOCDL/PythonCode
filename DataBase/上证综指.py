@@ -7,5 +7,5 @@ change=close-open
 print(change)
 yesterday=change[:-1]
 today=change[1:]
-plt.scatter(yesterday,today,10,'r','<',alpha=0.1)
+plt.scatter(yesterday,today,10,'r','<',alpha=0.5)
 plt.show()

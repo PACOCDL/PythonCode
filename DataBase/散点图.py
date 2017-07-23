@@ -1,7 +1,7 @@
 #coding=utf8
 import matplotlib.pyplot as plt
 import numpy as np
-N=1000
+N=100
 x=np.random.randn(N)
 
 # y=np.random.randn(N)
